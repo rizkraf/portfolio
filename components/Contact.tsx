@@ -8,9 +8,9 @@ export default function Contact() {
   const [state, action, isPending] = useActionState(sendEmail, null);
 
   return (
-    <section id="contact" className="w-full max-w-7xl mx-auto py-32 px-6">
+    <section id="contact" className="w-full max-w-7xl mx-auto py-20 md:py-32 px-6">
       <Reveal>
-        <h2 className="text-[10vw] leading-[0.8] font-bold tracking-tighter mb-20">
+        <h2 className="text-[12vw] md:text-[10vw] leading-[0.8] font-bold tracking-tighter mb-12 md:mb-20">
           LET'S <span className="text-accent">TALK</span>
         </h2>
       </Reveal>
@@ -25,7 +25,7 @@ export default function Contact() {
               name="name"
               required
               placeholder="YOUR NAME"
-              className="w-full bg-transparent border-b border-white/20 py-4 text-4xl md:text-6xl font-bold tracking-tighter placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors"
+              className="w-full bg-transparent border-b border-white/20 py-4 text-2xl md:text-6xl font-bold tracking-tighter placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors"
             />
           </div>
         </Reveal>
@@ -39,7 +39,7 @@ export default function Contact() {
               name="email"
               required
               placeholder="YOUR@EMAIL.COM"
-              className="w-full bg-transparent border-b border-white/20 py-4 text-4xl md:text-6xl font-bold tracking-tighter placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors"
+              className="w-full bg-transparent border-b border-white/20 py-4 text-2xl md:text-6xl font-bold tracking-tighter placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors"
             />
           </div>
         </Reveal>
@@ -53,7 +53,7 @@ export default function Contact() {
               required
               rows={4}
               placeholder="TELL ME ABOUT YOUR PROJECT..."
-              className="w-full bg-transparent border-b border-white/20 py-4 text-2xl md:text-4xl font-medium placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors resize-none"
+              className="w-full bg-transparent border-b border-white/20 py-4 text-xl md:text-4xl font-medium placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors resize-none"
             />
           </div>
         </Reveal>

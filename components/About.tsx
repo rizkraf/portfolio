@@ -23,9 +23,9 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="w-full max-w-7xl mx-auto py-32 px-6">
+    <section id="about" className="w-full max-w-7xl mx-auto py-20 md:py-32 px-6">
       <Reveal>
-        <h2 className="text-[10vw] leading-[0.8] font-bold tracking-tighter mb-20">
+        <h2 className="text-[12vw] md:text-[10vw] leading-[0.8] font-bold tracking-tighter mb-12 md:mb-20">
           ABOUT <span className="text-accent">ME</span>
         </h2>
       </Reveal>

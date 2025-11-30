@@ -5,9 +5,9 @@ import { Reveal } from "@/components/Reveal";
 
 export default function Hero() {
   return (
-    <section className="w-full max-w-7xl mx-auto flex flex-col justify-center min-h-screen px-6 pt-20">
+    <section className="w-full max-w-7xl mx-auto flex flex-col justify-center lg:min-h-screen px-6 pt-32 lg:pt-20">
       <Reveal>
-        <h1 className="text-[12vw] leading-[0.8] font-bold tracking-tighter mix-blend-difference text-center md:text-left">
+        <h1 className="text-[13vw] md:text-[10vw] leading-[0.85] md:leading-[0.8] font-bold tracking-tighter mix-blend-difference text-left">
           RIZKY RAFI <br />
           <span className="text-accent">AZHARA</span>
         </h1>

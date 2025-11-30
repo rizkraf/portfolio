@@ -42,9 +42,9 @@ export default function Portfolio() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   return (
-    <section id="portfolio" className="w-full max-w-7xl mx-auto py-32 px-6">
+    <section id="portfolio" className="w-full max-w-7xl mx-auto py-20 md:py-32 px-6">
       <Reveal>
-        <h2 className="text-[10vw] leading-[0.8] font-bold tracking-tighter mb-20">
+        <h2 className="text-[12vw] md:text-[10vw] leading-[0.8] font-bold tracking-tighter mb-12 md:mb-20">
           PERSONAL <span className="text-accent">WORK</span>
         </h2>
       </Reveal>
@@ -74,7 +74,7 @@ export default function Portfolio() {
               {/* Content */}
               <div className="relative z-10 flex flex-col gap-2 pointer-events-none">
                 <span className="text-sm font-mono text-accent">{project.category} — {project.year}</span>
-                <h3 className="text-4xl md:text-6xl font-bold tracking-tighter group-hover:translate-x-4 transition-transform duration-300">
+                <h3 className="text-3xl md:text-6xl font-bold tracking-tighter group-hover:translate-x-4 transition-transform duration-300">
                   {project.title}
                 </h3>
               </div>
