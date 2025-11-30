@@ -3,6 +3,7 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const destinationEmail = process.env.DESTINATION_EMAIL;
 
 export async function sendEmail(prevState: any, formData: FormData) {
   const name = formData.get("name") as string;
@@ -16,7 +17,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
   try {
     const { data, error } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
-      to: ["delivered@resend.dev"], // User needs to update this or verify their domain
+      to: [destinationEmail || "delivered@resend.dev"], // User needs to update this or verify their domain
       subject: `New message from ${name}`,
       replyTo: email,
       text: message,
