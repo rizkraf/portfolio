@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
+import Preloader from "@/components/Preloader";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
@@ -53,6 +54,7 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${inter.variable} antialiased bg-background text-foreground`}
       >
         <SmoothScroll>
+          <Preloader />
           <CustomCursor />
           <Navigation />
           {children}
