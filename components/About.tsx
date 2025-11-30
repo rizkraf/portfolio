@@ -3,6 +3,25 @@
 import { Reveal } from "@/components/Reveal";
 
 export default function About() {
+
+  const skills = [
+    "Typescript",
+    "React",
+    "Vue.js",
+    "Nuxt",
+    "Next.js",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "Nest.js",
+    "MySQL",
+    "PostgreSQL",
+    "Supabase",
+    "Redis",
+    "Git",
+    "Docker",
+  ];
+
   return (
     <section id="about" className="w-full max-w-7xl mx-auto py-32 px-6">
       <Reveal>
@@ -15,7 +34,7 @@ export default function About() {
         <div className="lg:col-span-8">
           <Reveal delay={0.2}>
             <p className="text-2xl md:text-4xl font-medium leading-tight mb-12">
-              I am a software engineer with a passion for building digital products that are not only functional but also visually compelling. I believe that code is a medium for art.
+              I am a software engineer with a passion for crafting robust and scalable web applications. I thrive on building end-to-end solutions that are both functional and performant.
             </p>
           </Reveal>
 
@@ -25,14 +44,9 @@ export default function About() {
                 <h3 className="text-xl font-bold mb-6 text-accent">EXPERIENCE</h3>
                 <ul className="space-y-8">
                   <li>
-                    <h4 className="text-2xl font-bold">SENIOR ENGINEER</h4>
-                    <p className="text-white/60">Tech Corp / 2022 - Present</p>
-                    <p className="mt-2 text-white/80">Leading frontend architecture and design system development.</p>
-                  </li>
-                  <li>
-                    <h4 className="text-2xl font-bold">WEB DEVELOPER</h4>
-                    <p className="text-white/60">Creative Agency / 2020 - 2022</p>
-                    <p className="mt-2 text-white/80">Built award-winning websites for global brands.</p>
+                    <h4 className="text-2xl font-bold">FRONTEND ENGINEER</h4>
+                    <p className="text-white/60">Roketin / Sep 2022 - Sep 2025</p>
+                    <p className="mt-2 text-white/80">Building and maintaining frontend applications using React, Vue.js, and Nuxt.js.</p>
                   </li>
                 </ul>
               </Reveal>
@@ -43,8 +57,8 @@ export default function About() {
                 <h3 className="text-xl font-bold mb-6 text-accent">EDUCATION</h3>
                 <ul className="space-y-8">
                   <li>
-                    <h4 className="text-2xl font-bold">BS COMPUTER SCIENCE</h4>
-                    <p className="text-white/60">University of Technology / 2016 - 2020</p>
+                    <h4 className="text-2xl font-bold">SOFTWARE ENGINEERING</h4>
+                    <p className="text-white/60">SMK Pusdikhubad / 2018 - 2021</p>
                   </li>
                 </ul>
               </Reveal>
@@ -55,21 +69,15 @@ export default function About() {
         <div className="lg:col-span-4 flex flex-col gap-12">
            <Reveal delay={0.5}>
              <div className="bg-white/5 p-8 rounded-lg border border-white/10">
-                <span className="block text-6xl font-bold text-accent mb-2">05+</span>
+                <span className="block text-6xl font-bold text-accent mb-2">3+</span>
                 <span className="text-lg font-medium">YEARS OF EXPERIENCE</span>
-             </div>
-           </Reveal>
-           <Reveal delay={0.6}>
-             <div className="bg-white/5 p-8 rounded-lg border border-white/10">
-                <span className="block text-6xl font-bold text-accent mb-2">50+</span>
-                <span className="text-lg font-medium">PROJECTS DELIVERED</span>
              </div>
            </Reveal>
            <Reveal delay={0.7}>
              <div>
                 <h3 className="text-xl font-bold mb-6 text-accent">SKILLS</h3>
                 <div className="flex flex-wrap gap-3">
-                  {["React", "Next.js", "TypeScript", "Node.js", "WebGL", "Three.js", "TailwindCSS", "PostgreSQL"].map((skill) => (
+                  {skills.map((skill) => (
                     <span key={skill} className="px-4 py-2 border border-white/20 rounded-full text-sm font-medium hover:bg-white hover:text-black transition-colors cursor-default">
                       {skill}
                     </span>

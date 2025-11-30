@@ -30,9 +30,9 @@ export default function Navigation() {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className="fixed top-0 w-full z-[60] px-6 py-6 mix-blend-difference text-white"
       >
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
           <Link href="/" className="text-xl font-bold tracking-tighter">
-            RIZKY RAFI
+            {"</>"}
           </Link>
 
           {/* Desktop Menu */}

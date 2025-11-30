@@ -16,7 +16,7 @@ export default function Contact() {
       </Reveal>
 
       <form action={action} className="flex flex-col gap-12 max-w-4xl">
-        <Reveal delay={0.2}>
+        <Reveal delay={0.2} width="100%">
           <div className="group relative">
             <label htmlFor="name" className="block text-sm font-mono text-white/60 mb-2">NAME</label>
             <input
@@ -30,7 +30,7 @@ export default function Contact() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.3}>
+        <Reveal delay={0.3} width="100%">
           <div className="group relative">
             <label htmlFor="email" className="block text-sm font-mono text-white/60 mb-2">EMAIL</label>
             <input
@@ -44,7 +44,7 @@ export default function Contact() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.4}>
+        <Reveal delay={0.4} width="100%">
           <div className="group relative">
             <label htmlFor="message" className="block text-sm font-mono text-white/60 mb-2">MESSAGE</label>
             <textarea

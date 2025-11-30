@@ -45,7 +45,7 @@ export default function Portfolio() {
     <section id="portfolio" className="w-full max-w-7xl mx-auto py-32 px-6">
       <Reveal>
         <h2 className="text-[10vw] leading-[0.8] font-bold tracking-tighter mb-20">
-          SELECTED <span className="text-accent">WORK</span>
+          PERSONAL <span className="text-accent">WORK</span>
         </h2>
       </Reveal>
 

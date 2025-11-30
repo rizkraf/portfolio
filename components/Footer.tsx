@@ -11,18 +11,18 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-4 text-right">
           <div className="flex gap-6 text-lg font-medium">
-            <Link href="https://github.com" target="_blank" className="hover:text-accent transition-colors">
+            <Link href="https://github.com/rizkraf" target="_blank" className="hover:text-accent transition-colors">
               GITHUB
             </Link>
-            <Link href="https://linkedin.com" target="_blank" className="hover:text-accent transition-colors">
+            <Link href="https://linkedin.com/in/rizkraf" target="_blank" className="hover:text-accent transition-colors">
               LINKEDIN
             </Link>
-            <Link href="https://twitter.com" target="_blank" className="hover:text-accent transition-colors">
+            <Link href="https://twitter.com/rizkraf" target="_blank" className="hover:text-accent transition-colors">
               TWITTER
             </Link>
           </div>
           <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} RIZKY RAFI. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()}. ALL RIGHTS RESERVED.
           </p>
         </div>
       </div>
