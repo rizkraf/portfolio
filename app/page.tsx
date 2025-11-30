@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
-import { useState } from "react";
+import { useState, useActionState } from "react";
+import { sendEmail } from "./actions";
 
 const projects = [
   {
@@ -40,6 +41,7 @@ const projects = [
 ];
 
 export default function Home() {
+  const [state, action, isPending] = useActionState(sendEmail, null);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   return (
@@ -203,13 +205,15 @@ export default function Home() {
           </h2>
         </Reveal>
 
-        <form className="flex flex-col gap-12 max-w-4xl">
+        <form action={action} className="flex flex-col gap-12 max-w-4xl">
           <Reveal delay={0.2}>
             <div className="group relative">
               <label htmlFor="name" className="block text-sm font-mono text-white/60 mb-2">NAME</label>
               <input
                 type="text"
                 id="name"
+                name="name"
+                required
                 placeholder="YOUR NAME"
                 className="w-full bg-transparent border-b border-white/20 py-4 text-4xl md:text-6xl font-bold tracking-tighter placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors"
               />
@@ -222,6 +226,8 @@ export default function Home() {
               <input
                 type="email"
                 id="email"
+                name="email"
+                required
                 placeholder="YOUR@EMAIL.COM"
                 className="w-full bg-transparent border-b border-white/20 py-4 text-4xl md:text-6xl font-bold tracking-tighter placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors"
               />
@@ -233,6 +239,8 @@ export default function Home() {
               <label htmlFor="message" className="block text-sm font-mono text-white/60 mb-2">MESSAGE</label>
               <textarea
                 id="message"
+                name="message"
+                required
                 rows={4}
                 placeholder="TELL ME ABOUT YOUR PROJECT..."
                 className="w-full bg-transparent border-b border-white/20 py-4 text-2xl md:text-4xl font-medium placeholder:text-white/10 focus:outline-none focus:border-accent transition-colors resize-none"
@@ -241,12 +249,21 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={0.5}>
-            <button
-              type="submit"
-              className="self-start mt-8 px-12 py-6 bg-white text-black text-xl font-bold tracking-tight hover:bg-accent hover:scale-105 transition-all duration-300"
-            >
-              SEND MESSAGE
-            </button>
+            <div className="flex flex-col gap-4">
+              <button
+                type="submit"
+                disabled={isPending}
+                className="self-start mt-8 px-12 py-6 bg-white text-black text-xl font-bold tracking-tight hover:bg-accent hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isPending ? "SENDING..." : "SEND MESSAGE"}
+              </button>
+              {state?.error && (
+                <p className="text-red-500 font-mono text-sm">{state.error}</p>
+              )}
+              {state?.success && (
+                <p className="text-green-500 font-mono text-sm">MESSAGE SENT SUCCESSFULLY!</p>
+              )}
+            </div>
           </Reveal>
         </form>
       </section>
