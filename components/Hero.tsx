@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 
 export default function Hero() {
+  const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL;
+
   return (
     <section className="w-full max-w-7xl mx-auto flex flex-col justify-center lg:min-h-screen px-6 pt-32 lg:pt-0">
       <Reveal>
@@ -20,8 +21,8 @@ export default function Hero() {
         </Reveal>
         <Reveal delay={0.6}>
           <a
-            href="/resume.pdf"
-            download
+            href={resumeUrl}
+            target="_blank"
             className="inline-block px-8 py-4 border border-white/20 rounded-full text-sm font-bold tracking-widest hover:bg-white hover:text-black transition-colors"
           >
             DOWNLOAD RESUME
