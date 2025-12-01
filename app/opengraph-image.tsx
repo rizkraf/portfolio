@@ -142,7 +142,7 @@ export default async function Image() {
                 display: "flex",
               }}
             >
-              RIZKY RAFI
+              RIZKY RAFI AZHARA
             </div>
             <div
               style={{
