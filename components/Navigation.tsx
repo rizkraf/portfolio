@@ -28,7 +28,7 @@ export default function Navigation() {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="fixed top-0 w-full z-[60] px-6 py-6 mix-blend-difference text-white"
+        className="fixed top-0 w-full z-60 px-6 py-6 mix-blend-difference text-white"
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center lg:px-6">
           <Link href="/" className="text-xl font-bold tracking-tighter">
@@ -44,7 +44,7 @@ export default function Navigation() {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden flex flex-col gap-1.5 z-[70] relative"
+            className="md:hidden flex flex-col gap-1.5 z-70 relative"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <motion.span

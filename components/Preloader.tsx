@@ -38,7 +38,7 @@ export default function Preloader() {
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-background text-foreground"
+          className="fixed inset-0 z-9999 flex items-center justify-center bg-background text-foreground"
         >
           <div className="flex items-center gap-4">
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
