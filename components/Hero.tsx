@@ -1,10 +1,9 @@
 "use client";
 
 import { Reveal } from "@/components/Reveal";
+import Link from "next/link";
 
 export default function Hero() {
-  const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL;
-
   return (
     <section className="w-full max-w-7xl mx-auto flex flex-col justify-center lg:min-h-screen px-6 pt-32 lg:pt-0">
       <Reveal>
@@ -13,20 +12,20 @@ export default function Hero() {
           <span className="text-accent">AZHARA</span>
         </h1>
       </Reveal>
-      <div className="mt-12 flex flex-col justify-between items-start gap-8">
+      <div className="mt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <Reveal delay={0.4}>
           <p className="text-xl md:text-2xl max-w-xl font-medium leading-relaxed">
             I craft seamless digital solutions, blending <span className="text-accent">front-end elegance</span> with <span className="text-accent">back-end robustness</span>.
           </p>
         </Reveal>
         <Reveal delay={0.6}>
-          <a
-            href={resumeUrl}
-            target="_blank"
-            className="inline-block px-8 py-4 border border-white/20 rounded-full text-sm font-bold tracking-widest hover:bg-white hover:text-black transition-colors"
+          <Link
+            href="#portfolio"
+            className="group flex items-center gap-4 text-lg font-bold tracking-tight hover:text-accent transition-colors"
           >
-            DOWNLOAD RESUME
-          </a>
+            VIEW WORKS
+            <span className="block w-12 h-[2px] bg-current group-hover:w-20 transition-all duration-300" />
+          </Link>
         </Reveal>
       </div>
     </section>

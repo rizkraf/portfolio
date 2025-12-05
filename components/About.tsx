@@ -3,6 +3,7 @@
 import { Reveal } from "@/components/Reveal";
 
 export default function About() {
+  const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL;
 
   const skills = [
     "Typescript",
@@ -36,6 +37,18 @@ export default function About() {
             <p className="text-2xl md:text-4xl font-medium leading-tight mb-12">
               I am a software engineer with a passion for crafting robust and scalable web applications. I thrive on building end-to-end solutions that are both functional and performant.
             </p>
+          </Reveal>
+
+          <Reveal delay={0.3}>
+            <div className="mb-12">
+              <a
+                href={resumeUrl}
+                target="_blank"
+                className="inline-block px-8 py-4 border border-white/20 rounded-full text-sm font-bold tracking-widest hover:bg-white hover:text-black transition-colors"
+              >
+                DOWNLOAD RESUME
+              </a>
+            </div>
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

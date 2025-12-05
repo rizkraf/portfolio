@@ -1,40 +1,18 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 
 const projects = [
   {
     id: 1,
-    title: "E-COMMERCE PLATFORM",
+    title: "TodoRealm",
     category: "Development",
-    year: "2024",
-    description: "A headless Shopify solution built with Next.js 14.",
-    image: "/project-ecommerce.png",
-  },
-  {
-    id: 2,
-    title: "FINTECH DASHBOARD",
-    category: "Design & Dev",
-    year: "2023",
-    description: "Real-time financial data visualization for a fintech startup.",
-    image: "/project-fintech.png",
-  },
-  {
-    id: 3,
-    title: "ART GALLERY",
-    category: "Creative Coding",
-    year: "2023",
-    description: "Immersive 3D gallery experience using Three.js.",
-    image: "/project-art-gallery.png",
-  },
-  {
-    id: 4,
-    title: "AI WRITING ASSISTANT",
-    category: "AI Integration",
-    year: "2022",
-    description: "GPT-4 powered writing tool for content creators.",
-    image: "/project-ai-writing.png",
+    year: "2025",
+    description: "Task management app with gamification features built with React Router v7 and Supabase",
+    image: "/project-todorealm.png",
+    url: "https://www.todorealm.app",
   },
 ];
 
@@ -52,8 +30,11 @@ export default function Portfolio() {
       <div className="flex flex-col">
         {projects.map((project, index) => (
           <Reveal key={project.id} width="100%" delay={index * 0.1}>
-            <div
-              className="group relative border-t border-white/20 py-12 flex flex-col md:flex-row justify-between items-start md:items-center overflow-hidden transition-all duration-500 hover:py-24"
+            <Link
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative border-t border-white/20 py-12 flex flex-col md:flex-row justify-between items-start md:items-center overflow-hidden transition-all duration-500 hover:py-24 block"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
@@ -66,7 +47,7 @@ export default function Portfolio() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover opacity-40"
+                  className="w-full h-full object-cover object-top opacity-40"
                 />
                 <div className="absolute inset-0 bg-linear-to-r from-black/80 to-transparent" />
               </div>
@@ -81,7 +62,7 @@ export default function Portfolio() {
               <p className="relative z-10 mt-4 md:mt-0 max-w-md text-white/60 group-hover:text-white transition-colors pointer-events-none">
                 {project.description}
               </p>
-            </div>
+            </Link>
           </Reveal>
         ))}
         <div className="border-t border-white/20" />
@@ -89,3 +70,4 @@ export default function Portfolio() {
     </section>
   );
 }
+
