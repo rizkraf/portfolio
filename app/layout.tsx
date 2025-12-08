@@ -21,23 +21,23 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rizkyrafi.dev"), // Replace with actual domain when deployed
-  title: "Rizky Rafi Azhara | Software Engineer",
-  description: "Portfolio of Rizky Rafi Azhara, a software engineer specializing in bold and experimental web experiences.",
-  keywords: ["Software Engineer", "Web Developer", "React", "Next.js", "Portfolio", "Creative Developer"],
+  title: "Rizky Rafi Azhara | Full Stack Developer",
+  description: "Portfolio of Rizky Rafi Azhara, a full stack developer specializing in bold and experimental web experiences.",
+  keywords: ["Full Stack Developer", "Web Developer", "React", "Next.js", "Portfolio", "Creative Developer"],
   authors: [{ name: "Rizky Rafi Azhara" }],
   creator: "Rizky Rafi Azhara",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    title: "Rizky Rafi Azhara | Software Engineer",
-    description: "Portfolio of Rizky Rafi Azhara, a software engineer specializing in bold and experimental web experiences.",
+    title: "Rizky Rafi Azhara | Full Stack Developer",
+    description: "Portfolio of Rizky Rafi Azhara, a full stack developer specializing in bold and experimental web experiences.",
     siteName: "Rizky Rafi Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rizky Rafi Azhara | Software Engineer",
-    description: "Portfolio of Rizky Rafi Azhara, a software engineer specializing in bold and experimental web experiences.",
+    title: "Rizky Rafi Azhara | Full Stack Developer",
+    description: "Portfolio of Rizky Rafi Azhara, a full stack developer specializing in bold and experimental web experiences.",
     creator: "@rizkraf",
   },
   icons: {

@@ -35,7 +35,7 @@ export default function About() {
         <div className="lg:col-span-8">
           <Reveal delay={0.2}>
             <p className="text-2xl md:text-4xl font-medium leading-tight mb-12">
-              I am a software engineer with a passion for crafting robust and scalable web applications. I thrive on building end-to-end solutions that are both functional and performant.
+              I am a full stack developer with passion for creating web applications that are not only functional but also provide an exceptional user experience. I specialize in building responsive, high-performance applications using modern technologies.
             </p>
           </Reveal>
 
