@@ -49,15 +49,15 @@ export default function Navigation() {
           >
             <motion.span
               animate={isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-              className="w-8 h-[2px] bg-white block"
+              className="w-8 h-0.5 bg-white block"
             />
             <motion.span
               animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="w-8 h-[2px] bg-white block"
+              className="w-8 h-0.5 bg-white block"
             />
             <motion.span
               animate={isMobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-              className="w-8 h-[2px] bg-white block"
+              className="w-8 h-0.5 bg-white block"
             />
           </button>
         </div>

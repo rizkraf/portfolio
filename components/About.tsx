@@ -1,27 +1,11 @@
 "use client";
 
 import { Reveal } from "@/components/Reveal";
+import { skillNames } from "@/lib/data/skills";
+import { experiences, education } from "@/lib/data/experience";
 
 export default function About() {
   const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL;
-
-  const skills = [
-    "Typescript",
-    "React",
-    "Vue.js",
-    "Nuxt",
-    "Next.js",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js",
-    "Nest.js",
-    "MySQL",
-    "PostgreSQL",
-    "Supabase",
-    "Redis",
-    "Git",
-    "Docker",
-  ];
 
   return (
     <section id="about" className="w-full max-w-7xl mx-auto py-20 md:py-32 px-6">
@@ -56,11 +40,13 @@ export default function About() {
               <Reveal delay={0.3}>
                 <h3 className="text-xl font-bold mb-6 text-accent">EXPERIENCE</h3>
                 <ul className="space-y-8">
-                  <li>
-                    <h4 className="text-2xl font-bold">FRONTEND ENGINEER</h4>
-                    <p className="text-white/60">Roketin / Sep 2022 - Sep 2025</p>
-                    <p className="mt-2 text-white/80">Building and maintaining frontend applications using React, Vue.js, and Nuxt.js.</p>
-                  </li>
+                  {experiences.map((exp) => (
+                    <li key={exp.company}>
+                      <h4 className="text-2xl font-bold">{exp.title}</h4>
+                      <p className="text-white/60">{exp.company} / {exp.period}</p>
+                      <p className="mt-2 text-white/80">{exp.description}</p>
+                    </li>
+                  ))}
                 </ul>
               </Reveal>
             </div>
@@ -69,10 +55,12 @@ export default function About() {
               <Reveal delay={0.4}>
                 <h3 className="text-xl font-bold mb-6 text-accent">EDUCATION</h3>
                 <ul className="space-y-8">
-                  <li>
-                    <h4 className="text-2xl font-bold">SOFTWARE ENGINEERING</h4>
-                    <p className="text-white/60">SMK Pusdikhubad / 2018 - 2021</p>
-                  </li>
+                  {education.map((edu) => (
+                    <li key={edu.institution}>
+                      <h4 className="text-2xl font-bold">{edu.degree}</h4>
+                      <p className="text-white/60">{edu.institution} / {edu.period}</p>
+                    </li>
+                  ))}
                 </ul>
               </Reveal>
             </div>
@@ -90,7 +78,7 @@ export default function About() {
              <div>
                 <h3 className="text-xl font-bold mb-6 text-accent">SKILLS</h3>
                 <div className="flex flex-wrap gap-3">
-                  {skills.map((skill) => (
+                  {skillNames.map((skill) => (
                     <span key={skill} className="px-4 py-2 border border-white/20 rounded-full text-sm font-medium hover:bg-white hover:text-black transition-colors cursor-default">
                       {skill}
                     </span>
